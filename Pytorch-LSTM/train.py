@@ -13,10 +13,8 @@ import os
 import shutil
 ##module
 from module.param import *
-from module import Class_deep
-Class = Class_deep
-import sys
-args = sys.argv
+from module import Class
+Class = Class
 
 #モデルの定義
 LSTM_MODEL = Class.LSTM(in_size, Node, out_size)
@@ -55,7 +53,7 @@ def train():
         X = torch.from_numpy(X)
         T = torch.from_numpy(T)
         Y = LSTM_MODEL(x=X)
-        loss += LossFunction(Y, T)
+        loss = LossFunction(Y, T)
 
         loss.backward()
         optimizer.step()

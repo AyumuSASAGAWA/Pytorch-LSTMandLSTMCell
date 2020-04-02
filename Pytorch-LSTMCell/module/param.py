@@ -1,7 +1,5 @@
 # -*- coding: utf-8 -*-
 # パラメータの定義
-import sys
-args = sys.argv
 #データ何プロットを学習するか
 N = 100
 #データの数
