@@ -1,2 +1,2 @@
 # Pytorch-LSTMandLSTMCell
-PytorchのLSTMとLSTMCellを実装してみた
+PytorchのLSTMとLSTMCellを実装してみた。
