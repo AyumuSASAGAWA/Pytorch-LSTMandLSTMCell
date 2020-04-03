@@ -19,6 +19,7 @@ class LSTM(nn.Module):
         self.linear = nn.Linear(hidden_size, out_size)
 
     def forward(self, x):       
+        # LSTM2層の場合は[[h1,c1], [h1, c1]]で初期化
         #ここ自動化しないと
         hiddens = [ torch.zeros(self.num_layers, 1, self.hidden_size), torch.zeros(self.num_layers, 1, self.hidden_size)]
         output, [h,c] = self.lstm(x,hiddens)

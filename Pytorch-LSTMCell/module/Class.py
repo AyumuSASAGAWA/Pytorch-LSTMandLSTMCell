@@ -25,4 +25,5 @@ class LSTM(nn.Module):
         return output, [ [h1, c1], [h2, c2] ]
 
     def initHidden(self):
+        # LSTM2層の場合は[[h1,c1], [h1, c1]]で初期化
         return [ [torch.zeros(BATCH_SIZE, self.hidden_size), torch.zeros(BATCH_SIZE, self.hidden_size)],[torch.zeros(BATCH_SIZE, self.hidden_size), torch.zeros(BATCH_SIZE, self.hidden_size)]  ]

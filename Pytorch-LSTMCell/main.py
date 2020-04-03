@@ -35,7 +35,6 @@ def train():
     # 学習する関数の表示
     plt.plot(train_x, train_t, label="training data", marker=".")
     plt.show()
-    loss_graph = []
     # 学習
     for epoch in range(EPOCH_NUM):
         # 誤差の初期化
@@ -54,8 +53,7 @@ def train():
         loss = loss / N
         loss.backward()
         optimizer.step()
-        loss_graph.append(loss)
-        # SHOW PREDICTION TIME EVERY 10 EPOCH  
+
         if (epoch+1) % 10 == 0:
             print("epoch:\t{}\tloss:\t{}".format(epoch+1, loss))
 
